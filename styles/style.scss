@@ -1,0 +1,44 @@
+html {
+    font-size: 100%;
+    box-sizing: border-box;
+}
+
+*, *::before *::after {
+    box-sizing: inherit;
+}
+
+body {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    background-color: #101010;
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    font-size: 1.25rem;
+    line-height: 1.3;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    max-width: 450px;
+    width: 100%;
+    background-color: #ffffff;
+    color: #000000;
+    border-radius: 5px;
+    box-shadow: 3px 2px 14px rgba(#262631,0.4);
+    text-decoration: none;
+
+    &__image {
+        flex: 0 0 125px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+
+    &__title {}
+
+    &__snippet {}
+
+    &__readmore {}
+
+}
