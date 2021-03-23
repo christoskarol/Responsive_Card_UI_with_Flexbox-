@@ -8,7 +8,6 @@ html {
 }
 
 body {
-    display: flex;
     margin: 0;
     padding: 0;
     background-color: #101010;
@@ -17,16 +16,28 @@ body {
     line-height: 1.3;
 }
 
+.cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    padding: 3rem;
+    
+}
+
 .card {
     display: flex;
     flex-direction: column;
+    flex: 1 0 300px; //allow to grow , don't want to shrink less than 300px
     max-width: 450px;
     width: 100%;
+    overflow: hidden;
     background-color: #ffffff;
     color: #000000;
     border-radius: 5px;
     box-shadow: 3px 2px 14px rgba(#262631,0.4);
     text-decoration: none;
+    font-size: 1rem;
 
     &__image {
         flex: 0 0 125px;
@@ -35,10 +46,28 @@ body {
         background-position: center center;
     }
 
-    &__title {}
+    &__content {
+        padding: 1rem;
+        height: 100%; //the content area occupies all the container, read more *fix
+        display:flex;
+        flex-direction: column;
+    }
 
-    &__snippet {}
+    &__title {
+        font-size: 1.75rem;
+        font-weight: 700;
+        margin-bottom: 0.5rem;
+    }
 
-    &__readmore {}
+    &__snippet {
+        margin-bottom: 0.5rem;
+    }
+
+    &__readmore {
+        text-transform: uppercase;
+        font-weight: 700;
+        margin-top: auto; // *auto margins and flexbox children
+        margin-left: auto;
+    }
 
 }
